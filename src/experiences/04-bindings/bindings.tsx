@@ -1,6 +1,9 @@
 import { createSignal } from "solid-js"
 
 import styles from "./styles.module.css";
+import { Refs } from "./refs";
+import { Spread } from "./spread";
+import { Directives } from "./Directives";
 
 const Bindings = () => {
     const [pos, setPos] = createSignal({ x: 0, y: 0 });
@@ -46,6 +49,12 @@ const Bindings = () => {
             classList={{ [styles.selected]: current() === 'baz' }}
             onClick={() => setCurrent('baz')}
         >baz</button>
+        <h2>Refs</h2>
+        <Refs />
+        <h2>Spead</h2>
+        <Spread />
+        <h2>Directives</h2>
+        <Directives />
 
     </>
 }
